@@ -14,10 +14,8 @@ import cn.itcast.utils.MyCookieUtil;
 
 /**
  * 显示用户上次的访问时间
- * @author Administrator
- *
  */
-public class LatTimeServlet extends HttpServlet {
+public class LastTimeServlet extends HttpServlet {
 	private static final long serialVersionUID = -6068764497514719951L;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -46,27 +44,27 @@ public class LatTimeServlet extends HttpServlet {
 		if(cookie == null){
 			// 我是第一次访问
 			// 输出一句话
-			response.getWriter().print("<h3>亲，大爷带钱再来哦！！</h3>");
+			response.getWriter().print("<h3>亲，这是您的第一次访问！！</h3>");
 			// 记录当前的时间
 			// 把当前的时间回保存cookie中
 			Cookie c = new Cookie("last", sDate);
 			
 			// 设置有效时间
 			c.setMaxAge(60*60);	// 1小时
-			c.setPath("/day11"); // 有效路径就变成了/day11
+			c.setPath("/test"); // 有效路径就变成了/test
 			// 回写
 			response.addCookie(c);
 		}else{
 			// 获取上次的访问时间（从cookie中获取）
 			String lasttime = cookie.getValue();
 			// 把上次的时间输出到页面上去
-			response.getWriter().print("<h3>亲，您上次的访问时间是"+lasttime+"，下次快点来哦！！</h3>");
+			response.getWriter().print("<h3>亲，您上次的访问时间是" + lasttime + " ！！</h3>");
 			// 记录当前的时间
 			cookie.setValue(sDate);
 			
 			// 设置有效时间
 			cookie.setMaxAge(60*60);	// 1小时
-			cookie.setPath("/day11"); // 有效路径就变成了/day11
+			cookie.setPath("/test"); // 有效路径就变成了/test
 			
 			// 回写
 			response.addCookie(cookie);
