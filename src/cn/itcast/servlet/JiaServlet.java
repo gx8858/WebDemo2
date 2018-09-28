@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 处理求和的操作
- * @author Administrator
- *
  */
 public class JiaServlet extends HttpServlet {
 
