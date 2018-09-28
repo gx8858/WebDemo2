@@ -15,8 +15,8 @@
     <servlet-class>cn.itcast.servlet.JiaServlet</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>LatTimeServlet</servlet-name>
-    <servlet-class>cn.itcast.cookie.LatTimeServlet</servlet-class>
+    <servlet-name>LastTimeServlet</servlet-name>
+    <servlet-class>cn.itcast.cookie.LastTimeServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>ProductServlet</servlet-name>
@@ -44,7 +44,7 @@
     <url-pattern>/jia</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>LatTimeServlet</servlet-name>
+    <servlet-name>LastTimeServlet</servlet-name>
     <url-pattern>/servlet/lasttime</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
