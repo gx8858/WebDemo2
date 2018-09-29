@@ -46,7 +46,7 @@ public class ProductServlet extends HttpServlet {
 			c.setMaxAge(60*60*24);
 			
 			// 设置有效的路径
-			c.setPath("/day11");
+			c.setPath("/test");
 			
 			// 回写
 			response.addCookie(c);
@@ -59,19 +59,19 @@ public class ProductServlet extends HttpServlet {
 			String [] ids = longid.split(",");
 			if(!checkId(ids,id)){
 				// 说明不包含该商品
-				cookie.setValue(id+","+longid);
+				cookie.setValue(id + "," + longid);
 				
 				cookie.setMaxAge(60*60*24);
 				
 				// 设置有效的路径
-				cookie.setPath("/day11");
+				cookie.setPath("/test");
 				
 				// 回写cookie
 				response.addCookie(cookie);
 			}
 		}
 		// 重定向或者转发（使用request域存储内容，必须是转发）request.getContextPath()获取虚拟路径，默认和项目名称相同
-		response.sendRedirect(request.getContextPath()+"/cookie/productList.jsp");
+		response.sendRedirect(request.getContextPath() + "/cookie/productList.jsp");
 	}
 	
 	/**
