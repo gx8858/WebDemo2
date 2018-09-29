@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<h3><a href="/day11/session/cartlist.jsp">继续购物</a>|<a href="/day11/session/pay.jsp">去结算</a></h3>
+	<h2>加入购物车成功！</h2>
+	<h3><a href="/test/session/cartlist.jsp">继续购物</a>|<a href="/test/session/pay.jsp">去结算</a></h3>
 
 </body>
 </html>
