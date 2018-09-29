@@ -27,7 +27,7 @@ public class RemoveProductServlet extends HttpServlet {
 		if(cookie != null){
 			
 			// 设置有效路径
-			cookie.setPath("/day11");
+			cookie.setPath("/test");
 			
 			// 设置有效时间是0
 			cookie.setMaxAge(0);
