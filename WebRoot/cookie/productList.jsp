@@ -22,16 +22,16 @@
 </head>
 <body>
 
-	<img class="img1" src="/day11/img/1.jpg"><a href="/day11/product?id=1">手电筒</a>
-	<img class="img1" src="/day11/img/2.jpg"><a href="/day11/product?id=2">电话</a>
-	<img class="img1" src="/day11/img/3.jpg"><a href="/day11/product?id=3">电视</a>
+	<img class="img1" src="/test/img/1.jpg"><a href="/test/product?id=1">手电筒</a>
+	<img class="img1" src="/test/img/2.jpg"><a href="/test/product?id=2">电话</a>
+	<img class="img1" src="/test/img/3.jpg"><a href="/test/product?id=3">电视</a>
 	<br/>
-	<img class="img1" src="/day11/img/4.jpg"><a href="/day11/product?id=4">冰箱</a>
-	<img class="img1" src="/day11/img/5.jpg"><a href="/day11/product?id=5">手表</a>
-	<img class="img1" src="/day11/img/6.jpg"><a href="/day11/product?id=6">电脑</a>
+	<img class="img1" src="/test/img/4.jpg"><a href="/test/product?id=4">冰箱</a>
+	<img class="img1" src="/test/img/5.jpg"><a href="/test/product?id=5">手表</a>
+	<img class="img1" src="/test/img/6.jpg"><a href="/test/product?id=6">电脑</a>
 	
 	<h3>商品的浏览器记录</h3>
-	<h4><a href="/day11/removeProduct">清除浏览记录</a></h4>
+	<h4><a href="/test/removeProduct">清除浏览记录</a></h4>
 	
 <%
 	// 获取到cookie的内容 可以把cookie的内容动态的显示到页面上
@@ -47,7 +47,7 @@
 		// 循环遍历
 		for(String id : ids){
 %>
-		<img class="img2" src="/day11/img/<%= id %>.jpg">++++"/day11/img/<%= id %>.jpg"
+		<img class="img2" src="/test/img/<%= id %>.jpg">++++"/test/img/<%= id %>.jpg"
 <%			
 			
 		}
