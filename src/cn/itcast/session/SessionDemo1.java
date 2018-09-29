@@ -22,7 +22,7 @@ public class SessionDemo1 extends HttpServlet {
 		// 获取session的钥匙
 		System.out.println(session.getId());
 		
-		String path = "/day11/session2";
+		String path = "/test/session2";
 		// 重写路径
 		// String path2 = response.encodeRedirectURL(path);
 		// 重定向到session2后台
