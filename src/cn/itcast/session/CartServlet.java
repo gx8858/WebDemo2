@@ -12,8 +12,6 @@ import javax.servlet.http.HttpSession;
 
 /**
  * 购物车的后台
- * @author Administrator
- *
  */
 public class CartServlet extends HttpServlet {
 	private static final long serialVersionUID = -4944571720622706932L;
@@ -71,8 +69,6 @@ public class CartServlet extends HttpServlet {
 			}
 		}
 		
-			
-	
 		// 重定向到继续购物或者去结算的页面
 		response.sendRedirect(request.getContextPath()+"/session/gopay.jsp");
 		
