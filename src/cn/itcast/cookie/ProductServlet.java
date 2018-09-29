@@ -1,6 +1,9 @@
 package cn.itcast.cookie;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -26,7 +29,7 @@ public class ProductServlet extends HttpServlet {
 		 * 		* 如果是第一次访问，把商品的id保存到cookie中，回写cookie。
 		 * 		* 如果不是第一次访问
 		 * 			* 先获取cookie中的内容，进行判断（判断cookie中是否包含当前点击的商品）
-		 * 				* 如果cookie中已经包含了该商品，那么就不用处理了
+		 * 				* 如果cookie中已经包含了该商品例如2  product=1,2,3  就 把该商品提前 product=2,1,3
 		 * 				* 如果不包含，在cookie中追加该商品	product=1	product=1,2
 		 * 2.重定向商品的列表页面
 		 * 3.需要在商品的列表页面中获取cookie的中内容，把内容显示到页面上。
@@ -68,6 +71,26 @@ public class ProductServlet extends HttpServlet {
 				
 				// 回写cookie
 				response.addCookie(cookie);
+			} else {
+				// 包含该商品(把该商品拿到最前面展示)
+				String longid2 = "";
+				for (String str : ids) {
+					if (!str.equals(id)) {
+						longid2 = longid2 + str + ",";
+					}
+				}
+				String longid3 = longid2.substring(0, longid2.length() - 1);
+				
+				cookie.setValue(id + "," + longid3);
+				
+				cookie.setMaxAge(60*60*24);
+				
+				// 设置有效的路径
+				cookie.setPath("/test");
+				
+				// 回写cookie
+				response.addCookie(cookie);
+				
 			}
 		}
 		// 重定向或者转发（使用request域存储内容，必须是转发）request.getContextPath()获取虚拟路径，默认和项目名称相同
