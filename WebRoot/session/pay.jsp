@@ -30,7 +30,7 @@
 	}else{
 		
 %>
-		<h3>亲，您还没有<a href="/day11/session/cartlist.jsp">败家</a>，请您快去败家</h3>
+		<h3>亲，您还没有<a href="/test/session/cartlist.jsp">败家</a>，请您快去败家</h3>
 <%		
 		
 	}
